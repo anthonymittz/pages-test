@@ -1,0 +1,96 @@
+/* Base styling */
+:root {
+  --color-primary: ;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* Shared elements */
+header, main, footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+header {
+  height: 80px;
+  justify-content: space-between;
+  padding: 0 10vw;
+}
+main {
+  min-height: calc(100vh - 80px);
+}
+footer {
+  min-height: 60vh;
+  color: #ccc;
+}
+
+/* Navigation */
+.navigation, .navigation ul, .navigation li, .navigation a {
+  height: 100%;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+}
+.navigation li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+.navigation a.active {
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none;
+  color: #333;
+}
+
+
+/* Brand */
+.brand h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.25pt;
+}
+
+
+/* Pages */
+.page {
+  padding: 2rem 10vw;
+}
+.page h1 {
+  font-size: 48px;
+  margin-bottom: 0.5em;
+}
+.page .content {
+  max-width: 38pc;
+}
+
+/* Fallback page */
+#fallback-page .content {
+  margin-bottom: 4rem;
+}
+#fallback-page .code {
+  font-size: 20vh;
+  color: #11111122;
+}
+#fallback-page .message {
+  font-size: 24px;
+  text-align: center;
+}
